@@ -2,10 +2,14 @@ language: c++
 python:
 - '3.4'
 before_install:
-  - chmod +x install-dependencies.sh
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
   - sudo apt-get install -qq cmake unzip libmysqlcppconn-dev:i386
-install: ./install-dependencies.sh
+  - chmod +x install-dependencies.sh
+install: 
+  - sudo apt-get install -qq g++-5
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+  - ./install-dependencies.sh
 script:
 - python3 tools/sqf_validator.py
 - python3 tools/config_style_checker.py
