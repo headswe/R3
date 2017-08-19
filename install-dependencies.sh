@@ -10,5 +10,5 @@ mv mysql-connector-c-6.1.11-linux-glibc2.12-i686 mysql
 mv extension/Linux32-gcc poco/build/config/
 mv spdlog-0.10.0/include/spdlog extension/include
 cd poco
-./configure --config=Linux32-gcc --static --shared --no-samples --no-tests --include-path=../mysql/include --library-path=../mysql/lib --omit=CppUnit,CppUnit/WinTestRunner,Net,Crypto,NetSSL_OpenSSL,NetSSL_Win,Data/SQLite,Data/ODBC,Zip,PageCompiler,PageCompiler/File2Page,PDF,CppParser,MongoDB,PocoDoc,ProGen
+./configure --config=Linux32-gcc --static --shared --no-samples --no-tests --include-path=~/build/*/R3/mysql/include --library-path=~/build/*/R3/mysql/lib --omit=CppUnit,CppUnit/WinTestRunner,Net,Crypto,NetSSL_OpenSSL,NetSSL_Win,Data/SQLite,Data/ODBC,Zip,PageCompiler,PageCompiler/File2Page,PDF,CppParser,MongoDB,PocoDoc,ProGen
 make -s
