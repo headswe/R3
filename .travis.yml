@@ -8,7 +8,7 @@ before_install:
   - chmod +x install-dependencies.sh
 install: 
   - sudo apt-get install -qq g++-5
-  sudo apt-get install gcc-5-multilib g++-5-multilib
+  - sudo apt-get install gcc-5-multilib g++-5-multilib
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
   - ./install-dependencies.sh
 script:
