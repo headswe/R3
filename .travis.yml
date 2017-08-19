@@ -13,8 +13,8 @@ install:
   - ./install-dependencies.sh
 script:
 - cd extension/build
-- sed 's/^SET(POCO_HOME.*/SET(POCO_HOME \"..\/..\/poco\")/' CMakeLists.txt
-- sed 's/^SET(MYSQL_HOME.*/SET(MYSQL_HOME \"..\/..\/mysql\")/' CMakeLists.txt
-- sed 's/^SET(MYSQL64_HOME.*/SET(MYSQL_HOME \"..\/..\/mysql\")/' CMakeLists.txt
+- sed 's/^SET(POCO_HOME.*/SET(POCO_HOME \"poco\")/' CMakeLists.txt
+- sed 's/^SET(MYSQL_HOME.*/SET(MYSQL_HOME \"mysql\")/' CMakeLists.txt
+- sed 's/^SET(MYSQL64_HOME.*/SET(MYSQL_HOME \"mysql\")/' CMakeLists.txt
 - cmake . -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32
 - make
