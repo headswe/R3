@@ -4,7 +4,7 @@ python:
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
-  - sudo apt-get install -qq cmake unzip libmysqlcppconn-dev:i386 libmysqlclient
+  - sudo apt-get install -qq cmake unzip libmysqlcppconn-dev:i386 mysql-client libmysqlclient-dev
   - chmod +x install-dependencies.sh
 install: 
   - sudo apt-get install -qq g++-5
