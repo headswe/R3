@@ -15,6 +15,6 @@ script:
 - sed "s|^SET(POCO_HOME.*|SET(POCO_HOME \"$PWD\/poco\/\")|" CMakeLists.txt
 - sed "s|^SET(MYSQL_HOME.*|SET(MYSQL_HOME \"$PWD\/mysql\/\")|" CMakeLists.txt
 - sed "s|^SET(MYSQL64_HOME.*|SET(MYSQL64_HOME \"$PWD\/mysql\/\")|" CMakeLists.txt
-- cat CMakeLists.txt
+- cd extension/build
 - cmake . -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32
 - make
