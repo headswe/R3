@@ -7,7 +7,7 @@ unzip -qq poco-1.7.5-all.zip
 tar -zxf mysql-connector-c-6.1.11-linux-glibc2.12-i686.tar.gz
 mv poco-1.7.5-all poco
 mv mysql-connector-c-6.1.11-linux-glibc2.12-i686 mysql
-mv ../Linux32-gcc poco/build/config/
+mv extension/Linux32-gcc poco/build/config/
 mv spdlog-0.10.0/include/spdlog extension/build/include
 cd poco
 ./configure --config=Linux32-gcc --static --shared --no-samples --no-tests --include-path=~/build/*/R3/mysql/include --library-path=~/build/*/R3/mysql/lib --omit=CppUnit,CppUnit/WinTestRunner,Net,Crypto,NetSSL_OpenSSL,NetSSL_Win,Data/SQLite,Data/ODBC,Zip,PageCompiler,PageCompiler/File2Page,PDF,CppParser,MongoDB,PocoDoc,ProGen
